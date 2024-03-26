@@ -1,10 +1,12 @@
 "use client";
-import { usePosts } from "@/store";
 import Link from "next/link";
+// import useSWR from "swr";
+import { usePosts } from "@/store";
 import { useEffect } from "react";
 import { shallow } from "zustand/shallow";
 
 const Posts = () => {
+  // const {} = useSWR('posts');
   const [posts, loading, getAllPosts] = usePosts(
     (state) => [state.posts, state.loading, state.getAllPosts],
     shallow

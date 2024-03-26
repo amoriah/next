@@ -1,12 +1,18 @@
-import Link from "next/link";
+import { Navigation } from "./Navigation";
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Blog", href: "/blog" },
+];
 
 const Header = () => {
-    return <header>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/blog">Blog</Link>
-    </header>;
-  };
-  
-  export { Header };
-  
+  return (
+    <header>
+      {/* ll */}
+      <Navigation navLinks={navItems} />
+    </header>
+  );
+};
+
+export { Header };
